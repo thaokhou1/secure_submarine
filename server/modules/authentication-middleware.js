@@ -12,7 +12,7 @@ const rejectUnauthenticated = (req, res, next) => {
 
 const allowedPassword = (req, res, next) => {
   // check if logged in
-  if (req.user.password === 'tuna') {
+  if (req.user.clearance_level == 18) {
     // They were authenticated! User may do the next thing
     // Note! They may not be Authorized to do all things
     next();
